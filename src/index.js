@@ -6,8 +6,16 @@ function updateTime() {
 
   johannesburgDateElement.innerHTML = johannesburgTime.format("MMMM Do YYYY");
   johannesburgTimeElement.innerHTML = johannesburgTime.format(
-    "h:mm:ss [<small>]A[<small>]"
+    "HH:mm:ss [<small>]A[<small>]"
   );
+
+  let baliElement = document.querySelector("#bali");
+  let baliDateElement = baliElement.querySelector(".date");
+  let baliTimeElement = baliElement.querySelector(".time");
+  let baliTime = moment().tz("Asia/Jakarta");
+
+  baliDateElement.innerHTML = baliTime.format("MMMM Do YYYY");
+  baliTimeElement.innerHTML = baliTime.format("HH:mm:ss [<small>]A[<small>]");
 
   let dubaiElement = document.querySelector("#dubai");
   let dubaiDateElement = dubaiElement.querySelector(".date");
@@ -15,7 +23,7 @@ function updateTime() {
   let dubaiTime = moment().tz("Asia/Dubai");
 
   dubaiDateElement.innerHTML = dubaiTime.format("MMMM Do YYYY");
-  dubaiTimeElement.innerHTML = dubaiTime.format("h:mm:ss [<small>]A[<small>]");
+  dubaiTimeElement.innerHTML = dubaiTime.format("HH:mm:ss [<small>]A[<small>]");
 }
 updateTime();
 setInterval(updateTime, 1000);
@@ -38,7 +46,7 @@ function updateCity(event) {
             <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
           </div>
           <div class="time">${cityTime.format(
-            "h:mm:ss"
+            "HH:mm:ss"
           )}<small>${cityTime.format("A")}</small></div>
         </div>
         <a href="/">All Cities</a>

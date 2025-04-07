@@ -1,5 +1,5 @@
 body {
-  font-family: Roboto Mono, monospace;
+  font-family: sans-serif;
 }
 
 .container {
@@ -22,7 +22,7 @@ select {
 h1 {
   text-align: center;
   font-size: 40px;
-  font-family: Roboto Mono, monospace;
+  font-family: sans-serif;
 }
 h2 {
   margin: 0 0 5px;
@@ -33,7 +33,7 @@ h2 {
   justify-content: space-between;
   margin: 20px 0;
   padding: 20px 0;
-  border-bottom: 1px dashed grey;
+  border-bottom: 1px dashed rgb(231, 226, 226);
 }
 .city:last-child {
   border: none;
@@ -54,5 +54,5 @@ h2 {
 footer {
   text-align: center;
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(193, 138, 138, 0.5);
 }
